@@ -1,0 +1,16 @@
+|tong
+Z <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst2.ACLR
+CLR => inst3.ACLR
+CLR => inst4.ACLR
+CLK => inst.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+CLK => inst4.CLK
+Q4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+Q3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+

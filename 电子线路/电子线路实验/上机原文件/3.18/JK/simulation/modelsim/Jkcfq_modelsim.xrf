@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, E:/stu7/3.18/JK/Jkcfq.bdf
+source_file = 1, E:/stu7/3.18/JK/db/Jkcfq.cbx.xml
+design_name = Jkcfq
+instance = comp, \Q~output\, Q~output, Jkcfq, 1
+instance = comp, \PRN~input\, PRN~input, Jkcfq, 1
+instance = comp, \CLR~input\, CLR~input, Jkcfq, 1
+instance = comp, \inst~1\, inst~1, Jkcfq, 1
+instance = comp, \clk~input\, clk~input, Jkcfq, 1
+instance = comp, \K~input\, K~input, Jkcfq, 1
+instance = comp, \J~input\, J~input, Jkcfq, 1
+instance = comp, \inst~3\, inst~3, Jkcfq, 1
+instance = comp, \inst~0\, inst~0, Jkcfq, 1
+instance = comp, \inst~_emulated\, inst~_emulated, Jkcfq, 1
+instance = comp, \inst~2\, inst~2, Jkcfq, 1

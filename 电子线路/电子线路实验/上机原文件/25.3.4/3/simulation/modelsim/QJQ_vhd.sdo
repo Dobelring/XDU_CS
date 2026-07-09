@@ -1,0 +1,96 @@
+// Copyright (C) 1991-2009 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+
+// 
+// Device: Altera EP2S180F1508C5 Package FBGA1508
+// 
+
+// 
+// This SDF file should be used for ModelSim-Altera (VHDL) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "QJQ")
+  (DATE "03/04/2025 18:03:08")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus II")
+  (VERSION "Version 9.0 Build 132 02/25/2009 SJ Full Version")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE \\a0\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (1048:1048:1048) (1048:1048:1048))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE \\b0\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (1048:1048:1048) (1048:1048:1048))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_lcell_comb")
+    (INSTANCE inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (4692:4692:4692) (4692:4692:4692))
+        (PORT datab (4686:4686:4686) (4686:4686:4686))
+        (IOPATH dataa combout (490:490:490) (490:490:490))
+        (IOPATH datab combout (464:464:464) (464:464:464))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_lcell_comb")
+    (INSTANCE inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (4692:4692:4692) (4692:4692:4692))
+        (PORT datab (4686:4686:4686) (4686:4686:4686))
+        (IOPATH dataa combout (490:490:490) (490:490:490))
+        (IOPATH datab combout (464:464:464) (464:464:464))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE \\c\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (433:433:433) (433:433:433))
+        (IOPATH datain padio (2576:2576:2576) (2576:2576:2576))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE \\s0\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (435:435:435) (435:435:435))
+        (IOPATH datain padio (2576:2576:2576) (2576:2576:2576))
+      )
+    )
+  )
+)

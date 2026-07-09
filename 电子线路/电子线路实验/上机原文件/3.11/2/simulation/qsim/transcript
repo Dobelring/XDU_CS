@@ -1,0 +1,24 @@
+# do qjq.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module qjq
+# 
+# Top level modules:
+# 	qjq
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module qjq_vlg_sample_tst
+# -- Compiling module qjq_vlg_check_tst
+# -- Compiling module qjq_vlg_vec_tst
+# 
+# Top level modules:
+# 	qjq_vlg_vec_tst
+# vsim -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.qjq_vlg_vec_tst 
+# Loading work.qjq_vlg_vec_tst
+# Loading work.qjq
+# Loading cycloneiv_ver.cycloneiv_io_obuf
+# Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
+# Loading work.qjq_vlg_sample_tst
+# Loading work.qjq_vlg_check_tst
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(272)
+#    Time: 1 us  Iteration: 0  Instance: /qjq_vlg_vec_tst/tb_out

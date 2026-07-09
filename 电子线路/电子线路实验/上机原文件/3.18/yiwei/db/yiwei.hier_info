@@ -1,0 +1,40 @@
+|yiwei
+a0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR => inst.ACLR
+CLR => inst11.ACLR
+CLR => inst10.ACLR
+CLR => inst9.ACLR
+CLR => inst8.ACLR
+CLR => inst6.ACLR
+CLR => inst5.ACLR
+CLR => inst3.ACLR
+CLR => inst7.ACLR
+CLR => inst2.ACLR
+CLR => inst1.ACLR
+CLR => inst4.ACLR
+CLK => inst.CLK
+CLK => inst11.CLK
+CLK => inst10.CLK
+CLK => inst9.CLK
+CLK => inst8.CLK
+CLK => inst6.CLK
+CLK => inst5.CLK
+CLK => inst3.CLK
+CLK => inst7.CLK
+CLK => inst2.CLK
+CLK => inst1.CLK
+CLK => inst4.CLK
+PRN => inst.PRESET
+a1 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+a2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+a3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+a4 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+a5 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+a6 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+a7 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a8 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+a9 <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+a10 <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+a11 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+
+

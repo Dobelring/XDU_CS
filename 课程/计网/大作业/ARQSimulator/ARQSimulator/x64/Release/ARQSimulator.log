@@ -1,0 +1,22 @@
+﻿  contact.c
+  main.c
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(394,53): error C2440: “函数”: 无法从“float”转换为“Color”
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(394,53): warning C4024: “DrawRectangleRoundedLines”: 形参和实参 4 的类型不同
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(394,59): error C2197: “void DrawRectangleRoundedLines(Rectangle,float,int,Color)”: 用于调用的参数太多
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(408,54): error C2440: “函数”: 无法从“float”转换为“Color”
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(408,54): warning C4024: “DrawRectangleRoundedLines”: 形参和实参 4 的类型不同
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(408,60): error C2197: “void DrawRectangleRoundedLines(Rectangle,float,int,Color)”: 用于调用的参数太多
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(409,56): error C2440: “函数”: 无法从“float”转换为“Color”
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(409,56): warning C4024: “DrawRectangleRoundedLines”: 形参和实参 4 的类型不同
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(409,62): error C2197: “void DrawRectangleRoundedLines(Rectangle,float,int,Color)”: 用于调用的参数太多
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(438,57): error C2440: “函数”: 无法从“float”转换为“Color”
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(438,57): warning C4024: “DrawRectangleRoundedLines”: 形参和实参 4 的类型不同
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(438,63): error C2197: “void DrawRectangleRoundedLines(Rectangle,float,int,Color)”: 用于调用的参数太多
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(443,55): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(444,44): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(392,47): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(503,62): error C2440: “函数”: 无法从“float”转换为“Color”
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(503,62): warning C4024: “DrawRectangleRoundedLines”: 形参和实参 4 的类型不同
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(503,68): error C2197: “void DrawRectangleRoundedLines(Rectangle,float,int,Color)”: 用于调用的参数太多
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(505,59): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+D:\software\Visual Studio\Projects\ARQSimulator\ARQSimulator\main.c(506,60): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据

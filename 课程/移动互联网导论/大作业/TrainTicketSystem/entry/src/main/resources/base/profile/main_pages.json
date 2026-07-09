@@ -1,0 +1,7 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/AdminPage",
+    "pages/UserMainPage"
+  ]
+}

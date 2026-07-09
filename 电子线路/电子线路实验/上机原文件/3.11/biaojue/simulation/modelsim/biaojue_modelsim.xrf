@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, E:/stu7/3.11/biaojue/biaojue.bdf
+source_file = 1, E:/stu7/3.11/biaojue/db/biaojue.cbx.xml
+design_name = biaojue
+instance = comp, \f~output\, f~output, biaojue, 1
+instance = comp, \a~input\, a~input, biaojue, 1
+instance = comp, \b~input\, b~input, biaojue, 1
+instance = comp, \c~input\, c~input, biaojue, 1
+instance = comp, \inst3~0\, inst3~0, biaojue, 1

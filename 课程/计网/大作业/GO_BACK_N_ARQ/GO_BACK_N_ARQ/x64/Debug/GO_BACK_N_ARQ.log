@@ -1,0 +1,38 @@
+﻿  main.c
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(160,34): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(167,32): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(187,34): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(194,32): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(256,34): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(336,80): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(337,27): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(340,42): warning C4305: “函数”: 从“double”到“float”截断
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(342,64): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(342,110): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(344,44): warning C4305: “函数”: 从“double”到“float”截断
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(346,70): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(346,120): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(351,54): warning C4305: “函数”: 从“double”到“float”截断
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(354,38): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(355,38): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(360,77): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(360,100): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(367,35): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(368,38): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(376,52): warning C4305: “函数”: 从“double”到“float”截断
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(378,55): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(378,76): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(384,33): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(385,36): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(392,52): warning C4305: “函数”: 从“double”到“float”截断
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(395,65): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(396,36): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(400,51): warning C4305: “函数”: 从“double”到“float”截断
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(403,67): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(404,35): warning C4244: “函数”: 从“float”转换到“int”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(56,35): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(63,35): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(209,72): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\GO_BACK_N_ARQ\main.c(269,70): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+  GO_BACK_N_ARQ.vcxproj -> C:\Users\郑墨涵\OneDrive\Desktop\乱七八糟\作业\计网\大作业\GO_BACK_N_ARQ\x64\Debug\GO_BACK_N_ARQ.exe

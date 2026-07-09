@@ -1,0 +1,185 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'NPJT'
+Slack : -8.603
+TNS   : -8.603
+
+Type  : Slow 1200mV 85C Model Setup 'PRN'
+Slack : -7.513
+TNS   : -21.926
+
+Type  : Slow 1200mV 85C Model Setup 'CLR'
+Slack : -5.279
+TNS   : -15.439
+
+Type  : Slow 1200mV 85C Model Hold 'PRN'
+Slack : -3.821
+TNS   : -11.279
+
+Type  : Slow 1200mV 85C Model Hold 'CLR'
+Slack : -2.562
+TNS   : -7.515
+
+Type  : Slow 1200mV 85C Model Hold 'NPJT'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'NPJT'
+Slack : -8.611
+TNS   : -8.611
+
+Type  : Slow 1200mV 85C Model Recovery 'PRN'
+Slack : -7.401
+TNS   : -22.155
+
+Type  : Slow 1200mV 85C Model Recovery 'CLR'
+Slack : -5.376
+TNS   : -15.668
+
+Type  : Slow 1200mV 85C Model Removal 'PRN'
+Slack : -2.092
+TNS   : -6.055
+
+Type  : Slow 1200mV 85C Model Removal 'CLR'
+Slack : -0.784
+TNS   : -2.111
+
+Type  : Slow 1200mV 85C Model Removal 'NPJT'
+Slack : 2.248
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PRN'
+Slack : -3.000
+TNS   : -50.539
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLR'
+Slack : -3.000
+TNS   : -7.461
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'NPJT'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Slow 1200mV 0C Model Setup 'NPJT'
+Slack : -7.960
+TNS   : -7.960
+
+Type  : Slow 1200mV 0C Model Setup 'PRN'
+Slack : -6.999
+TNS   : -20.442
+
+Type  : Slow 1200mV 0C Model Setup 'CLR'
+Slack : -5.008
+TNS   : -14.683
+
+Type  : Slow 1200mV 0C Model Hold 'PRN'
+Slack : -3.624
+TNS   : -10.656
+
+Type  : Slow 1200mV 0C Model Hold 'CLR'
+Slack : -2.313
+TNS   : -6.761
+
+Type  : Slow 1200mV 0C Model Hold 'NPJT'
+Slack : 0.410
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'NPJT'
+Slack : -7.949
+TNS   : -7.949
+
+Type  : Slow 1200mV 0C Model Recovery 'PRN'
+Slack : -6.898
+TNS   : -20.638
+
+Type  : Slow 1200mV 0C Model Recovery 'CLR'
+Slack : -5.105
+TNS   : -14.879
+
+Type  : Slow 1200mV 0C Model Removal 'PRN'
+Slack : -2.088
+TNS   : -5.980
+
+Type  : Slow 1200mV 0C Model Removal 'CLR'
+Slack : -0.717
+TNS   : -1.905
+
+Type  : Slow 1200mV 0C Model Removal 'NPJT'
+Slack : 1.963
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PRN'
+Slack : -3.000
+TNS   : -47.470
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLR'
+Slack : -3.000
+TNS   : -7.461
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'NPJT'
+Slack : -3.000
+TNS   : -4.487
+
+Type  : Fast 1200mV 0C Model Setup 'NPJT'
+Slack : -3.775
+TNS   : -3.775
+
+Type  : Fast 1200mV 0C Model Setup 'PRN'
+Slack : -3.238
+TNS   : -9.455
+
+Type  : Fast 1200mV 0C Model Setup 'CLR'
+Slack : -1.547
+TNS   : -4.466
+
+Type  : Fast 1200mV 0C Model Hold 'PRN'
+Slack : -1.558
+TNS   : -4.605
+
+Type  : Fast 1200mV 0C Model Hold 'CLR'
+Slack : -1.206
+TNS   : -3.549
+
+Type  : Fast 1200mV 0C Model Hold 'NPJT'
+Slack : 0.231
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'NPJT'
+Slack : -3.815
+TNS   : -3.815
+
+Type  : Fast 1200mV 0C Model Recovery 'PRN'
+Slack : -3.235
+TNS   : -9.659
+
+Type  : Fast 1200mV 0C Model Recovery 'CLR'
+Slack : -1.622
+TNS   : -4.670
+
+Type  : Fast 1200mV 0C Model Removal 'PRN'
+Slack : -0.784
+TNS   : -2.200
+
+Type  : Fast 1200mV 0C Model Removal 'CLR'
+Slack : -0.372
+TNS   : -0.964
+
+Type  : Fast 1200mV 0C Model Removal 'NPJT'
+Slack : 1.056
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PRN'
+Slack : -3.000
+TNS   : -20.804
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLR'
+Slack : -3.000
+TNS   : -6.612
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'NPJT'
+Slack : -3.000
+TNS   : -4.087
+
+------------------------------------------------------------

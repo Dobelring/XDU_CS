@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, E:/stu7/25.3.4/3/QJQ.bdf
+source_file = 1, E:/stu7/25.3.4/3/db/QJQ.cbx.xml
+design_name = QJQ
+instance = comp, \a0~I\, a0, QJQ, 1
+instance = comp, \b0~I\, b0, QJQ, 1
+instance = comp, \c~I\, c, QJQ, 1
+instance = comp, \s0~I\, s0, QJQ, 1

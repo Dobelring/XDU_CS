@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, E:/stu7/3.18/1/aa.bdf
+source_file = 1, E:/stu7/3.18/1/Waveform.vwf
+source_file = 1, E:/stu7/3.18/1/db/aa.cbx.xml
+design_name = aa
+instance = comp, \Q~output , Q~output, aa, 1
+instance = comp, \PRN~input , PRN~input, aa, 1
+instance = comp, \CLR~input , CLR~input, aa, 1
+instance = comp, \inst~1 , inst~1, aa, 1
+instance = comp, \clk~input , clk~input, aa, 1
+instance = comp, \D~input , D~input, aa, 1
+instance = comp, \inst~3 , inst~3, aa, 1
+instance = comp, \inst~0 , inst~0, aa, 1
+instance = comp, \inst~_emulated , inst~_emulated, aa, 1
+instance = comp, \inst~2 , inst~2, aa, 1

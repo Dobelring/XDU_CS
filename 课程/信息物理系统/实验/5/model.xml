@@ -1,0 +1,115 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="model" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1">
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={-11, -11, 2582, 1550}, maximized=true}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[2348, 1403]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="2.44140625">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{486.6049780150753, 200.5992462311558}">
+    </property>
+    <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+        <property name="stopTime" class="ptolemy.data.expr.Parameter" value="50.0">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[705.0, 60.0]">
+        </property>
+    </property>
+    <entity name="PoissonClock" class="ptolemy.actor.lib.PoissonClock">
+        <property name="meanTime" class="ptolemy.data.expr.Parameter" value="2.0">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[125.0, 175.0]">
+        </property>
+    </entity>
+    <entity name="Ramp" class="ptolemy.actor.lib.Ramp">
+        <doc>Create a sequence of tokens with increasing value</doc>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[355.0, 185.0]">
+        </property>
+    </entity>
+    <entity name="ColtExponential" class="ptolemy.actor.lib.colt.ColtExponential">
+        <property name="lambda" class="ptolemy.actor.parameters.PortParameter" value="0.5">
+        </property>
+        <doc>Create a sequence of Exponential random variables</doc>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[315.0, 310.0]">
+        </property>
+    </entity>
+    <entity name="Server" class="ptolemy.domains.de.lib.Server">
+        <property name="serviceTime" class="ptolemy.actor.parameters.PortParameter" value="1.0">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[540.0, 185.0]">
+        </property>
+    </entity>
+    <entity name="TimedPlotter" class="ptolemy.actor.lib.gui.TimedPlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={389, 580, 965, 716}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[943, 629]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[585.0, 70.0]">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>TimedPlotter</title>
+<xLabel></xLabel>
+<yLabel></yLabel>
+<xRange min="0.0" max="48.4478255569"/>
+<yRange min="0.0" max="28.0"/>
+<default connected="no" stems="yes"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="TimedPlotter2" class="ptolemy.actor.lib.gui.TimedPlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={1435, 382, 996, 855}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[974, 768]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[645.0, 280.0]">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>TimedPlotter2</title>
+<xLabel></xLabel>
+<yLabel></yLabel>
+<xRange min="0.0" max="48.4478255569"/>
+<yRange min="0.0" max="9.0"/>
+<default connected="no" stems="yes"/>
+</plot>?>
+        </configure>
+    </entity>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="{250.0, 175.0}">
+        </vertex>
+    </relation>
+    <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="-1">
+        </property>
+        <vertex name="vertex1" value="{450.0, 185.0}">
+        </vertex>
+    </relation>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <link port="PoissonClock.output" relation="relation2"/>
+    <link port="Ramp.output" relation="relation4"/>
+    <link port="Ramp.trigger" relation="relation2"/>
+    <link port="ColtExponential.output" relation="relation3"/>
+    <link port="ColtExponential.trigger" relation="relation2"/>
+    <link port="Server.input" relation="relation4"/>
+    <link port="Server.output" relation="relation"/>
+    <link port="Server.serviceTime" relation="relation3"/>
+    <link port="Server.size" relation="relation5"/>
+    <link port="TimedPlotter.input" relation="relation4"/>
+    <link port="TimedPlotter.input" relation="relation"/>
+    <link port="TimedPlotter2.input" relation="relation5"/>
+</entity>

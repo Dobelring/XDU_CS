@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\software\\Visual Studio\\Projects\\ARQSimulator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0795A6CF-6ACA-4F3F-9339-899F8AC6D5CD}|ARQSimulator\\ARQSimulator.vcxproj|D:\\software\\Visual Studio\\Projects\\ARQSimulator\\ARQSimulator\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0795A6CF-6ACA-4F3F-9339-899F8AC6D5CD}|ARQSimulator\\ARQSimulator.vcxproj|solutionrelative:ARQSimulator\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\software\\Visual Studio\\Projects\\ARQSimulator\\ARQSimulator\\main.c",
+              "RelativeDocumentMoniker": "ARQSimulator\\main.c",
+              "ToolTip": "D:\\software\\Visual Studio\\Projects\\ARQSimulator\\ARQSimulator\\main.c",
+              "RelativeToolTip": "ARQSimulator\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-06-09T18:14:28.818Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

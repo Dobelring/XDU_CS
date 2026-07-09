@@ -1,0 +1,62 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="model" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1">
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={705, 620, 1239, 884}, maximized=false}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1005, 737]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{492.5, 358.5}">
+    </property>
+    <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+        <property name="stopTime" class="ptolemy.data.expr.Parameter" value="3000">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[790.0, 115.0]">
+        </property>
+    </property>
+    <property name="enableBackwardTypeInference" class="ptolemy.data.expr.Parameter" value="false">
+    </property>
+    <entity name="PoissonClock" class="ptolemy.actor.lib.PoissonClock">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[285.0, 265.0]">
+        </property>
+    </entity>
+    <entity name="TimeGap" class="ptolemy.domains.de.lib.TimeGap">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[455.0, 265.0]">
+        </property>
+    </entity>
+    <entity name="HistogramPlotter" class="ptolemy.actor.lib.gui.HistogramPlotter">
+        <property name="automaticRescale" class="ptolemy.data.expr.Parameter" value="false">
+        </property>
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={631, 38, 1297, 1523}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[1275, 1436]">
+        </property>
+        <property name="binWidth" class="ptolemy.data.expr.Parameter" value="0.1">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[605.0, 265.0]">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>HistogramPlotter</title>
+<xRange min="-1.5652749057490365" max="10.726252162531432"/>
+<yRange min="-42.70798436376865" max="320.12211946996496"/>
+<barGraph width="0.5" offset="0.15"/>
+<bin width="0.1" offset="0.5"/>
+</plot>?>
+        </configure>
+    </entity>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+    </relation>
+    <link port="PoissonClock.output" relation="relation"/>
+    <link port="TimeGap.input" relation="relation"/>
+    <link port="TimeGap.output" relation="relation2"/>
+    <link port="HistogramPlotter.input" relation="relation2"/>
+</entity>

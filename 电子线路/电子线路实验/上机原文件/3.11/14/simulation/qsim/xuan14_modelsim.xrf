@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, E:/stu7/3.11/14/xuan14.bdf
+source_file = 1, E:/stu7/3.11/14/Waveform.vwf
+source_file = 1, E:/stu7/3.11/14/db/xuan14.cbx.xml
+source_file = 1, c:/altera/13.1/quartus/libraries/others/maxplus2/74153.bdf
+design_name = xuan14
+instance = comp, \y~output , y~output, xuan14, 1
+instance = comp, \c3~input , c3~input, xuan14, 1
+instance = comp, \s0~input , s0~input, xuan14, 1
+instance = comp, \s1~input , s1~input, xuan14, 1
+instance = comp, \c1~input , c1~input, xuan14, 1
+instance = comp, \c0~input , c0~input, xuan14, 1
+instance = comp, \inst|9~0 , inst|9~0, xuan14, 1
+instance = comp, \c2~input , c2~input, xuan14, 1
+instance = comp, \inst|9~1 , inst|9~1, xuan14, 1

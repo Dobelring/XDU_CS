@@ -1,0 +1,17 @@
+Fitter Status : Successful - Tue Mar 04 18:18:21 2025
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : qjq2
+Top-level Entity Name : qjq2
+Family : Stratix II
+Device : EP2S180F1508C5
+Timing Models : Final
+Logic utilization : < 1 %
+    Combinational ALUTs : 2 / 143,520 ( < 1 % )
+    Dedicated logic registers : 0 / 143,520 ( 0 % )
+Total registers : 0
+Total pins : 5 / 1,171 ( < 1 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 9,383,040 ( 0 % )
+DSP block 9-bit elements : 0 / 768 ( 0 % )
+Total PLLs : 0 / 12 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

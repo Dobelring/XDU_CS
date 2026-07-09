@@ -1,0 +1,365 @@
+DATA SEGMENT
+    INPUT_MSG DB 'Enter a decimal number (up to 10 digits, Q to quit): $'
+    BINARY_MSG DB '32-bit Binary: $'
+    ERROR_MSG DB 'Error: Invalid input! Please enter digits only.', 0DH, 0AH, '$'
+    LENGTH_ERROR_MSG DB 'Error: Number exceeds 10 digits or 32-bit range!', 0DH, 0AH, '$'
+    COUNT_MSG DB 'Number of digits in string: $'
+    STRING_PROMPT DB 'Enter a string (space to finish): $'
+    NEWLINE DB 0DH, 0AH, '$'
+    PRESS_ANY_KEY DB 'Press any key to exit...$'
+    
+    ; 扩大缓冲区以接受更长的输入
+    DECIMAL_BUFFER DB 20, ?, 20 DUP('$')  ; 允许最多19个字符输入
+    BINARY_BUFFER DB 33 DUP('$')          ; 存储32位二进制结果 (32位 + '$')
+    STRING_BUFFER DB 100, ?, 100 DUP('$') ; 存储字符串输入
+    
+    ; 32位数值存储
+    NUMBER_LOW DW 0      ; 数值的低16位
+    NUMBER_HIGH DW 0     ; 数值的高16位
+DATA ENDS
+
+CODE SEGMENT
+    ASSUME CS:CODE, DS:DATA
+
+START:
+    MOV AX, DATA
+    MOV DS, AX
+
+MAIN_LOOP:
+    ; 显示输入提示
+    MOV AH, 09H
+    LEA DX, INPUT_MSG
+    INT 21H
+    
+    ; 读取十进制数输入
+    MOV AH, 0AH
+    LEA DX, DECIMAL_BUFFER
+    INT 21H
+    
+    ; 换行
+    MOV AH, 09H
+    LEA DX, NEWLINE
+    INT 21H
+    
+    ; 检查是否输入 'Q' 或 'q'
+    MOV SI, OFFSET DECIMAL_BUFFER + 2
+    MOV AL, [SI]
+    CMP AL, 'Q'
+    JE EXIT_PROGRAM
+    CMP AL, 'q'
+    JE EXIT_PROGRAM
+    
+    ; 检查输入长度是否超过10位
+    MOV AL, DECIMAL_BUFFER + 1    ; 实际输入的字符数
+    CMP AL, 10
+    JA LENGTH_ERROR               ; 如果超过10位，跳转到错误处理
+    
+    ; 验证输入是否为数字
+    CALL VALIDATE_INPUT
+    JC INPUT_ERROR
+    
+    ; 转换为二进制并显示
+    CALL CONVERT_TO_BINARY
+    JMP MAIN_LOOP
+
+LENGTH_ERROR:
+    ; 显示长度错误信息
+    MOV AH, 09H
+    LEA DX, LENGTH_ERROR_MSG
+    INT 21H
+    JMP MAIN_LOOP
+
+INPUT_ERROR:
+    ; 显示错误信息
+    MOV AH, 09H
+    LEA DX, ERROR_MSG
+    INT 21H
+    JMP MAIN_LOOP
+
+EXIT_PROGRAM:
+    ; 执行字符串数字统计功能
+    CALL COUNT_DIGITS_IN_STRING
+    
+    ; 程序结束
+    MOV AH, 4CH
+    INT 21H
+
+; 验证输入是否为数字字符
+VALIDATE_INPUT PROC
+    MOV SI, OFFSET DECIMAL_BUFFER + 2
+    MOV CL, DECIMAL_BUFFER + 1    ; 实际输入的字符数
+    
+    CMP CL, 0                     ; 检查是否为空输入
+    JE VALIDATE_FAIL
+    
+VALIDATE_LOOP:
+    CMP CL, 0
+    JE VALIDATE_SUCCESS
+    
+    MOV AL, [SI]
+    CMP AL, '0'
+    JB VALIDATE_FAIL
+    CMP AL, '9'
+    JA VALIDATE_FAIL
+    
+    INC SI
+    DEC CL
+    JMP VALIDATE_LOOP
+
+VALIDATE_SUCCESS:
+    CLC     ; 清除进位标志表示成功
+    RET
+
+VALIDATE_FAIL:
+    STC     ; 设置进位标志表示失败
+    RET
+VALIDATE_INPUT ENDP
+
+; 将十进制数转换为32位二进制并显示
+CONVERT_TO_BINARY PROC
+    ; 将ASCII数字转换为32位数值
+    CALL ASCII_TO_32BIT_NUMBER
+    
+    ; 检查数值是否超过32位范围
+    CMP NUMBER_HIGH, 0
+    JNE VALUE_OK  ; 如果高16位不为0，肯定在32位范围内
+    
+    ; 如果高16位为0，检查低16位是否超过65535
+    CMP NUMBER_LOW, 65535
+    JBE VALUE_OK
+    
+    ; 如果超过范围，显示错误信息
+    MOV AH, 09H
+    LEA DX, LENGTH_ERROR_MSG
+    INT 21H
+    RET
+    
+VALUE_OK:
+    ; 显示二进制消息
+    MOV AH, 09H
+    LEA DX, BINARY_MSG
+    INT 21H
+    
+    ; 转换为32位二进制字符串
+    MOV AX, NUMBER_HIGH
+    MOV DX, NUMBER_LOW
+    CALL CONVERT_32BIT_TO_BINARY
+    
+    ; 显示二进制结果
+    MOV AH, 09H
+    LEA DX, BINARY_BUFFER
+    INT 21H
+    
+    ; 换行
+    MOV AH, 09H
+    LEA DX, NEWLINE
+    INT 21H
+    
+    RET
+CONVERT_TO_BINARY ENDP
+
+; 将ASCII数字字符串转换为32位数值
+ASCII_TO_32BIT_NUMBER PROC
+    MOV SI, OFFSET DECIMAL_BUFFER + 2
+    MOV CL, DECIMAL_BUFFER + 1    ; 字符数
+    
+    ; 初始化32位数值为0
+    MOV NUMBER_LOW, 0
+    MOV NUMBER_HIGH, 0
+    
+CONVERT_ASCII_LOOP:
+    CMP CL, 0
+    JE CONVERT_DONE
+    
+    ; 读取当前字符并转换为数值
+    MOV AL, [SI]
+    SUB AL, '0'
+    MOV AH, 0
+    MOV DX, AX  ; DX = 当前数字
+    
+    ; 将当前32位数值乘以10
+    ; NUMBER_HIGH:NUMBER_LOW = NUMBER_HIGH:NUMBER_LOW * 10
+    CALL MULTIPLY_32BIT_BY_10
+    
+    ; 加上当前数字
+    ADD NUMBER_LOW, DX
+    ADC NUMBER_HIGH, 0  ; 带进位加法
+    
+    INC SI
+    DEC CL
+    JMP CONVERT_ASCII_LOOP
+    
+CONVERT_DONE:
+    RET
+ASCII_TO_32BIT_NUMBER ENDP
+
+; 32位数值乘以10
+MULTIPLY_32BIT_BY_10 PROC
+    ; 保存原始值
+    PUSH AX
+    PUSH DX
+    PUSH CX
+    
+    ; 将32位数值复制到CX:BX
+    MOV AX, NUMBER_LOW
+    MOV DX, NUMBER_HIGH
+    
+    ; 乘以2
+    SHL AX, 1
+    RCL DX, 1
+    
+    ; 保存乘以2的结果
+    MOV CX, DX
+    MOV BX, AX
+    
+    ; 乘以8 (左移3次)
+    SHL AX, 1
+    RCL DX, 1
+    SHL AX, 1
+    RCL DX, 1
+    SHL AX, 1
+    RCL DX, 1
+    
+    ; 加上乘以2的结果 (8+2=10)
+    ADD AX, BX
+    ADC DX, CX
+    
+    ; 存储结果
+    MOV NUMBER_LOW, AX
+    MOV NUMBER_HIGH, DX
+    
+    POP CX
+    POP DX
+    POP AX
+    RET
+MULTIPLY_32BIT_BY_10 ENDP
+
+; 将32位数值转换为二进制字符串
+CONVERT_32BIT_TO_BINARY PROC
+    ; DX:AX = 32位数值 (DX=高16位, AX=低16位)
+    MOV DI, OFFSET BINARY_BUFFER
+    MOV CX, 32          ; 32位二进制
+    
+CONVERT_LOOP:
+    ; 将32位数值左移1位，最高位进入CF
+    SHL AX, 1
+    RCL DX, 1
+    JC SET_ONE
+    
+SET_ZERO:
+    MOV BYTE PTR [DI], '0'
+    JMP NEXT_BIT
+    
+SET_ONE:
+    MOV BYTE PTR [DI], '1'
+
+NEXT_BIT:
+    INC DI
+    LOOP CONVERT_LOOP
+    
+    MOV BYTE PTR [DI], '$'  ; 字符串结束符
+    RET
+CONVERT_32BIT_TO_BINARY ENDP
+
+; 统计字符串中的数字字符个数
+COUNT_DIGITS_IN_STRING PROC
+    ; 显示提示信息
+    MOV AH, 09H
+    LEA DX, NEWLINE
+    INT 21H
+    
+    ; 显示字符串输入提示
+    LEA DX, STRING_PROMPT
+    INT 21H
+    
+    ; 读取字符串输入（以空格结束）
+    MOV CX, 0           ; 数字计数器
+    
+READ_STRING:
+    MOV AH, 01H         ; 读取单个字符
+    INT 21H
+    
+    CMP AL, ' '         ; 检查是否为空格
+    JE DISPLAY_COUNT
+    
+    CMP AL, 0DH         ; 检查是否为回车键
+    JE DISPLAY_COUNT
+    
+    CMP AL, '0'
+    JB NOT_DIGIT
+    CMP AL, '9'
+    JA NOT_DIGIT
+    
+    ; 如果是数字字符，增加计数
+    INC CX
+    JMP READ_STRING
+
+NOT_DIGIT:
+    JMP READ_STRING
+
+DISPLAY_COUNT:
+    ; 换行
+    MOV AH, 09H
+    LEA DX, NEWLINE
+    INT 21H
+    
+    ; 显示数字计数消息
+    LEA DX, COUNT_MSG
+    INT 21H
+    
+    ; 显示数字计数
+    MOV AX, CX
+    CALL DISPLAY_NUMBER
+    
+    ; 换行
+    MOV AH, 09H
+    LEA DX, NEWLINE
+    INT 21H
+    
+    ; 等待用户按键继续
+    MOV AH, 09H
+    LEA DX, NEWLINE
+    INT 21H
+    
+    LEA DX, PRESS_ANY_KEY
+    INT 21H
+    
+    MOV AH, 07H         ; 等待按键（无回显）
+    INT 21H
+    
+    RET
+COUNT_DIGITS_IN_STRING ENDP
+
+; 显示AX中的数字
+DISPLAY_NUMBER PROC
+    MOV BX, 10
+    MOV CX, 0
+    
+    CMP AX, 0           ; 如果数字为0，直接显示0
+    JNE PUSH_DIGITS
+    
+    MOV DL, '0'
+    MOV AH, 02H
+    INT 21H
+    RET
+    
+PUSH_DIGITS:
+    MOV DX, 0
+    DIV BX              ; AX = AX / 10, DX = 余数
+    PUSH DX
+    INC CX
+    CMP AX, 0
+    JNE PUSH_DIGITS
+    
+POP_DIGITS:
+    POP DX
+    ADD DL, '0'         ; 转换为ASCII
+    MOV AH, 02H         ; 显示字符
+    INT 21H
+    LOOP POP_DIGITS
+    
+    RET
+DISPLAY_NUMBER ENDP
+
+CODE ENDS
+END START

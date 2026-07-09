@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\software\\Visual Studio\\Projects\\Selective_Repeat_ARQ\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5FEDFF12-ECAD-4AB6-9D96-151C48AE8AD7}|Selective_Repeat_ARQ\\Selective_Repeat_ARQ.vcxproj|D:\\software\\Visual Studio\\Projects\\Selective_Repeat_ARQ\\Selective_Repeat_ARQ\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5FEDFF12-ECAD-4AB6-9D96-151C48AE8AD7}|Selective_Repeat_ARQ\\Selective_Repeat_ARQ.vcxproj|solutionrelative:Selective_Repeat_ARQ\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "D:\\software\\Visual Studio\\Projects\\Selective_Repeat_ARQ\\Selective_Repeat_ARQ\\main.c",
+              "RelativeDocumentMoniker": "Selective_Repeat_ARQ\\main.c",
+              "ToolTip": "D:\\software\\Visual Studio\\Projects\\Selective_Repeat_ARQ\\Selective_Repeat_ARQ\\main.c",
+              "RelativeToolTip": "Selective_Repeat_ARQ\\main.c",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAANcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-06-09T22:24:31.155Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

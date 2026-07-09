@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\stu7\3.18\yiwei\simulation\qsim
+vyiwei
+Z1 !s100 L5SO1IBV=V4GX8jaSZVUj1
+Z2 IJ14?;oDFWMTh?a^<n`C3l1
+Z3 VgJzm[>lZGzQXP=m`F=m290
+Z4 dE:\stu7\3.18\yiwei\simulation\qsim
+Z5 w1742892543
+Z6 8yiwei.vo
+Z7 Fyiwei.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|yiwei.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1742892544.763000
+Z12 !s107 yiwei.vo|
+!s101 -O0
+vyiwei_vlg_check_tst
+!i10b 1
+Z13 !s100 OAn0WhHCLYU]cc[zJ^]K[0
+Z14 IP6HR]>X9T1LbHk5kL:3:P1
+Z15 VDh4dIE<Nc^EO^@4KePEX60
+R4
+Z16 w1742892540
+Z17 8Waveform.vwf.vt
+Z18 FWaveform.vwf.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z19 !s108 1742892544.860000
+Z20 !s107 Waveform.vwf.vt|
+Z21 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+vyiwei_vlg_sample_tst
+!i10b 1
+Z22 !s100 iU=d:81cB=91oE>LTLK:71
+Z23 IHT=YZ>2Jz_=gRjkgF9ZIE2
+Z24 Vo[bT9i[GY6EzXG2_5>iRJ0
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vyiwei_vlg_vec_tst
+!i10b 1
+!s100 czJgOQR6j^A9RA[R?`B7U3
+IcS1Sb]UX_97i0>j<Z<S:i3
+Z25 VeYOCW5TKi8h]8cWC=nMmb2
+R4
+R16
+R17
+R18
+Z26 L0 399
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

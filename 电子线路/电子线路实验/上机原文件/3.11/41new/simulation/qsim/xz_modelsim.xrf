@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, E:/stu7/3.11/41new/xz.bdf
+source_file = 1, E:/stu7/3.11/41new/Waveform.vwf
+source_file = 1, E:/stu7/3.11/41new/db/xz.cbx.xml
+design_name = xz
+instance = comp, \F~output , F~output, xz, 1
+instance = comp, \A0~input , A0~input, xz, 1
+instance = comp, \D1~input , D1~input, xz, 1
+instance = comp, \D0~input , D0~input, xz, 1
+instance = comp, \A1~input , A1~input, xz, 1
+instance = comp, \inst4~1 , inst4~1, xz, 1
+instance = comp, \E~input , E~input, xz, 1
+instance = comp, \D2~input , D2~input, xz, 1
+instance = comp, \D3~input , D3~input, xz, 1
+instance = comp, \inst4~0 , inst4~0, xz, 1
+instance = comp, \inst4~2 , inst4~2, xz, 1

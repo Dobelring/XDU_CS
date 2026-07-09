@@ -1,0 +1,186 @@
+DATA SEGMENT
+    ; 功能1：指定数据区的字符串数据
+    WELCOME_MSG DB '=== Character and ASCII Code Display Program ===', 0DH, 0AH, '$'
+    PROMPT_MSG DB 'Please enter a character (Q/q to quit): $'
+    CHAR_MSG DB 'The character is: $'
+    ASCII_MSG DB '  ASCII code (hex): $'
+    NEWLINE DB 0DH, 0AH, '$'
+    SEPARATOR DB '----------------------------------------', 0DH, 0AH, '$'
+    
+    ; 功能2：学号姓名信息
+    STUDENT_INFO DB 'Student ID: 20231234  Name: Zhang San', 0DH, 0AH, '$'
+    
+    ; 功能3：字符和ASCII码显示缓冲区
+    CHAR_BUFFER DB ?          ; 存储输入的字符
+    ASCII_BUFFER DB 3 DUP('$') ; 存储ASCII码的十六进制表示
+DATA ENDS
+
+CODE SEGMENT
+    ASSUME CS:CODE, DS:DATA
+
+START:
+    ; 初始化数据段
+    MOV AX, DATA
+    MOV DS, AX
+    
+    ; 功能1：显示欢迎信息
+    CALL DISPLAY_WELCOME
+    
+    ; 功能2：显示学号姓名信息
+    CALL DISPLAY_STUDENT_INFO
+    
+    ; 功能3：主循环 - 字符输入和ASCII码显示
+    CALL MAIN_LOOP
+    
+    ; 程序结束
+    MOV AH, 4CH
+    INT 21H
+
+; 功能1：显示欢迎信息和分隔符
+DISPLAY_WELCOME PROC
+    MOV AH, 09H
+    LEA DX, WELCOME_MSG
+    INT 21H
+    
+    LEA DX, SEPARATOR
+    INT 21H
+    
+    RET
+DISPLAY_WELCOME ENDP
+
+; 功能2：显示学号姓名信息
+DISPLAY_STUDENT_INFO PROC
+    MOV AH, 09H
+    LEA DX, STUDENT_INFO
+    INT 21H
+    
+    LEA DX, SEPARATOR
+    INT 21H
+    
+    RET
+DISPLAY_STUDENT_INFO ENDP
+
+; 功能3：主循环 - 字符输入和ASCII码显示
+MAIN_LOOP PROC
+MAIN_LOOP_START:
+    ; 显示输入提示
+    MOV AH, 09H
+    LEA DX, PROMPT_MSG
+    INT 21H
+    
+    ; 读取单个字符（有回显）
+    MOV AH, 01H
+    INT 21H
+    
+    ; 保存输入的字符
+    MOV CHAR_BUFFER, AL
+    
+    ; 换行
+    MOV AH, 09H
+    LEA DX, NEWLINE
+    INT 21H
+    
+    ; 检查是否为退出字符 'Q' 或 'q'
+    CMP CHAR_BUFFER, 'Q'
+    JE EXIT_MAIN_LOOP
+    CMP CHAR_BUFFER, 'q'
+    JE EXIT_MAIN_LOOP
+    
+    ; 显示字符信息
+    CALL DISPLAY_CHAR_INFO
+    
+    ; 显示分隔符
+    MOV AH, 09H
+    LEA DX, SEPARATOR
+    INT 21H
+    
+    ; 继续循环
+    JMP MAIN_LOOP_START
+
+EXIT_MAIN_LOOP:
+    ; 显示退出信息
+    MOV AH, 09H
+    LEA DX, NEWLINE
+    INT 21H
+    LEA DX, SEPARATOR
+    INT 21H
+    
+    LEA DX, EXIT_MSG
+    INT 21H
+    
+    RET
+MAIN_LOOP ENDP
+
+; 显示字符和ASCII码信息
+DISPLAY_CHAR_INFO PROC
+    ; 显示字符信息
+    MOV AH, 09H
+    LEA DX, CHAR_MSG
+    INT 21H
+    
+    ; 显示字符本身
+    MOV DL, CHAR_BUFFER
+    MOV AH, 02H
+    INT 21H
+    
+    ; 显示ASCII码提示
+    MOV AH, 09H
+    LEA DX, ASCII_MSG
+    INT 21H
+    
+    ; 将ASCII码转换为十六进制并显示
+    MOV AL, CHAR_BUFFER
+    CALL DISPLAY_HEX
+    
+    ; 换行
+    MOV AH, 09H
+    LEA DX, NEWLINE
+    INT 21H
+    
+    RET
+DISPLAY_CHAR_INFO ENDP
+
+; 将AL中的字节以十六进制形式显示
+DISPLAY_HEX PROC
+    ; 保存原始值
+    MOV BL, AL
+    
+    ; 处理高4位
+    MOV AL, BL
+    SHR AL, 4           ; 右移4位，获取高4位
+    CALL HEX_DIGIT_TO_ASCII
+    MOV DL, AL
+    MOV AH, 02H
+    INT 21H             ; 显示高4位
+    
+    ; 处理低4位
+    MOV AL, BL
+    AND AL, 0FH         ; 屏蔽高4位，保留低4位
+    CALL HEX_DIGIT_TO_ASCII
+    MOV DL, AL
+    MOV AH, 02H
+    INT 21H             ; 显示低4位
+    
+    RET
+DISPLAY_HEX ENDP
+
+; 将AL中的低4位转换为ASCII字符
+HEX_DIGIT_TO_ASCII PROC
+    CMP AL, 10
+    JB IS_DIGIT         ; 如果小于10，是数字
+    
+    ; 是字母A-F
+    ADD AL, 'A' - 10    ; 转换为'A'-'F'
+    JMP CONVERSION_DONE
+    
+IS_DIGIT:
+    ADD AL, '0'         ; 转换为'0'-'9'
+    
+CONVERSION_DONE:
+    RET
+HEX_DIGIT_TO_ASCII ENDP
+
+EXIT_MSG DB 'Program ended. Thank you for using!', 0DH, 0AH, '$'
+
+CODE ENDS
+END START
