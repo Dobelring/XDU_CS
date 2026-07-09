@@ -1,0 +1,51 @@
+# 让 Git 自动检测文本文件（源代码），自动处理换行符
+* text=auto
+
+# ========== 文档类 ==========
+*.pdf       binary
+*.doc       binary
+*.docx      binary
+*.ppt       binary
+*.pptx      binary
+*.xls       binary
+*.xlsx      binary
+
+# ========== 压缩包 ==========
+*.zip       binary
+*.rar       binary
+*.7z        binary
+*.tar       binary
+*.gz        binary
+*.bz2       binary
+
+# ========== 图片 ==========
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.bmp       binary
+*.ico       binary
+*.webp      binary
+*.tiff      binary
+
+# ========== 多媒体 ==========
+*.mp3       binary
+*.mp4       binary
+*.wav       binary
+*.avi       binary
+*.mov       binary
+*.mkv       binary
+
+# ========== 工程设计 ==========
+*.ms10      binary
+*.ms14      binary
+
+# ========== 编译产物 ==========
+*.o         binary
+*.obj       binary
+*.exe       binary
+*.dll       binary
+*.so        binary
+*.lib       binary
+*.class     binary
+*.jar       binary
